@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cj1x0ub38ddui"]
+[gd_scene load_steps=22 format=3 uid="uid://cj1x0ub38ddui"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_kytma"]
 [ext_resource type="Texture2D" uid="uid://bon4ax4s56665" path="res://assets/player/raul/Kneeling (32 x 32).png" id="1_l7ux4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://w33772vvn8a2" path="res://assets/player/raul/Idle_Poses (32 x 32).png" id="3_7iwfn"]
 [ext_resource type="Texture2D" uid="uid://sas6x5w7ssie" path="res://assets/player/raul/Jumping (32 x 32).png" id="4_dar2b"]
 [ext_resource type="Texture2D" uid="uid://ym8q3xg3gttp" path="res://assets/player/raul/Running (32 x 32).png" id="5_dvuh3"]
+[ext_resource type="AudioStream" uid="uid://c8rdf7xt351w8" path="res://assets/sound/jump.mp3" id="7_mgebj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqoka"]
 atlas = ExtResource("1_l7ux4")
@@ -129,5 +130,10 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_jjpyr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_mgebj")
+volume_db = 11.394
+pitch_scale = 1.06
