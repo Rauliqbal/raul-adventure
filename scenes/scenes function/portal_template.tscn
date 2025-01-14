@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://c3wcf5w5v7tm7"]
+
+[ext_resource type="Script" path="res://scripts/portal_exit.gd" id="1_1cgye"]
+[ext_resource type="Texture2D" uid="uid://bf66stv44842" path="res://assets/tilesets/misc/portal.png" id="2_wjssd"]
+[ext_resource type="AudioStream" uid="uid://dn2tpp201sogr" path="res://assets/sound/portal_idle.mp3" id="3_tgj24"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5qym"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5kom"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn620"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgtek"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0xjp"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yp82"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny6w1"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi4df"]
+atlas = ExtResource("2_wjssd")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_370pn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5qym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5kom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn620")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgtek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0xjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yp82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny6w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi4df")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fvs82"]
+radius = 2.0
+height = 14.0
+
+[node name="PortalExit" type="Area2D" groups=["area_exits"]]
+collision_layer = 65536
+script = ExtResource("1_1cgye")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.98023e-08, -0.999998)
+scale = Vector2(0.322963, 0.341411)
+sprite_frames = SubResource("SpriteFrames_370pn")
+autoplay = "default"
+frame_progress = 0.291482
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_fvs82")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." groups=["area_exits"]]
+position = Vector2(0, 1)
+stream = ExtResource("3_tgj24")
+volume_db = 11.495
+pitch_scale = 1.09
+max_distance = 100.0
+playback_type = 1
+parameters/looping = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

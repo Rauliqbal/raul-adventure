@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqabepbnvldis"]
+[gd_scene load_steps=18 format=3 uid="uid://cqabepbnvldis"]
 
 [ext_resource type="Texture2D" uid="uid://dvg7245ib741s" path="res://assets/tilesets/grassland/Terrain (16 x 16).png" id="1_1pxgr"]
 [ext_resource type="Texture2D" uid="uid://b6by6e7omt81w" path="res://assets/tilesets/grassland/Background parts/5 - Sky_color.png" id="2_18jot"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bpk43uen5hs1q" path="res://assets/tilesets/grassland/Background parts/3 - Cloud_cover_1.png" id="5_xq6sb"]
 [ext_resource type="Texture2D" uid="uid://dbcgya6n3y85g" path="res://assets/tilesets/grassland/Background parts/4 - Cloud_cover_2.png" id="6_gccgg"]
 [ext_resource type="Texture2D" uid="uid://bnoi7mdk6l0yp" path="res://assets/tilesets/grassland/Background parts/2 - Hills.png" id="7_32vs1"]
+[ext_resource type="PackedScene" uid="uid://c3wcf5w5v7tm7" path="res://scenes/scenes function/portal_template.tscn" id="8_un621"]
 
 [sub_resource type="GDScript" id="GDScript_uspel"]
 script/source = "extends Node2D
@@ -567,3 +568,6 @@ offset_right = 734.0
 offset_bottom = 404.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="PortalExit" parent="." instance=ExtResource("8_un621")]
+position = Vector2(325, 133)
