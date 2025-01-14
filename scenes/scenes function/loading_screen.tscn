@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dvd7l2rq4ar8o"]
+
+[node name="LoadingScreen" type="Node2D"]

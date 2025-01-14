@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d7b8dfjkowaq"]
+[gd_scene load_steps=30 format=3 uid="uid://d7b8dfjkowaq"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_5c21u"]
 [ext_resource type="Texture2D" uid="uid://dvg7245ib741s" path="res://assets/tilesets/grassland/Terrain (16 x 16).png" id="1_wl5x8"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://d3or1wmi2cheg" path="res://assets/tilesets/misc/Flowers (16 x 16).png" id="9_hr2cm"]
 [ext_resource type="PackedScene" uid="uid://c3wcf5w5v7tm7" path="res://scenes/scenes function/portal_template.tscn" id="17_cmkdd"]
 [ext_resource type="PackedScene" uid="uid://lo6rfv51nonl" path="res://scenes/coin.tscn" id="18_qlrio"]
+[ext_resource type="AudioStream" uid="uid://bvjaayj8klgj0" path="res://assets/sound/coin.wav" id="19_5cghg"]
+[ext_resource type="PackedScene" uid="uid://bhong5ok5kavh" path="res://scenes/GUI.tscn" id="20_i0s05"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fajob"]
 texture = ExtResource("1_wl5x8")
@@ -260,6 +262,14 @@ layer_1/tile_data = PackedInt32Array(1048582, 393216, 3, 1114118, 262144, 3, 117
 layer_2/name = "decor"
 layer_2/tile_data = PackedInt32Array(655384, 65541, 1, 720920, 65541, 2, 786456, 65541, 3, 655385, 131077, 1, 720921, 131077, 2, 786457, 131077, 3, 655386, 196613, 1, 720922, 196613, 2, 786458, 196613, 3, 983059, 196614, 5, 983052, 196615, 2, 983053, 262151, 2, 983054, 327687, 2, 917533, 65543, 1, 983069, 65543, 2, 917534, 131079, 1, 983070, 131079, 2, 983071, 65542, 5, 983060, 65542, 5, 983051, 393223, 2, 983072, 9, 0, 983081, 9, 0, 983089, 9, 0, 983084, 65545, 0, 983091, 65545, 0, 786455, 196617, 0, 983061, 196617, 0, 983076, 196617, 0, 983090, 589834, 4, 917554, 262154, 1, 983083, 11, 0, 852015, 917510, 4, 917551, 917510, 5, 983087, 917510, 5, 852016, 983046, 4, 852017, 983046, 4, 852018, 983046, 4, 852019, 983046, 4, 852020, 983046, 4, 852021, 1179654, 4, 917557, 1179654, 5, 983093, 1179654, 5, 852022, 327686, 1, 917558, 327686, 2, 983094, 327686, 3, 852023, 393222, 1, 917559, 393222, 2, 983095, 393222, 3, 852024, 458758, 1, 917560, 458758, 2, 983096, 458758, 3, 786481, 983046, 2, 786482, 1048582, 2, 786483, 1114118, 2, 917562, 196617, 0, 983105, 196617, 0, 983132, 262154, 4, 786524, 262154, 3, 917596, 262154, 4, 852060, 262154, 4, 983118, 327685, 3, 983119, 393221, 3, 983120, 458757, 3, 983121, 524293, 3, 983128, 327686, 5, 983129, 393222, 5, 983130, 458758, 5, 720990, 983046, 2, 720991, 1048582, 2, 720992, 1114118, 2, 983123, 9, 0, 589924, 9, 0, 393324, 131081, 0, 983125, 393226, 4, 983126, 458762, 4, 852053, 65546, 3, 917589, 65546, 4, 852054, 131082, 3, 917590, 131082, 4, 655441, 458762, 1, 327750, 196617, 0, 131140, 65545, 0, 327744, 65545, 0, 327747, 65542, 5, 458826, 196614, 5, -655216, 327686, 1, -589680, 327686, 2, -524144, 327686, 3, -655215, 393222, 1, -589679, 393222, 2, -524143, 393222, 3, -655214, 458758, 1, -589678, 458758, 2, -524142, 65542, 5, -851816, 327686, 1, -786280, 327686, 2, -720744, 327686, 3, -851815, 393222, 1, -786279, 393222, 2, -720743, 393222, 3, -851814, 458758, 1, -786278, 458758, 2, -720742, 458758, 3, -1113950, 327686, 1, -1048414, 327686, 2, -982878, 327686, 3, -1113949, 393222, 1, -1048413, 393222, 2, -982877, 393222, 3, -1113948, 458758, 1, -1048412, 458758, 2, -982876, 458758, 3, -1376089, 327686, 1, -1310553, 327686, 2, -1245017, 327686, 3, -1376088, 393222, 1, -1310552, 393222, 2, -1245016, 393222, 3, -1376087, 458758, 1, -1310551, 458758, 2, -1245015, 458758, 3, -1507151, 327686, 1, -1441615, 327686, 2, -1376079, 327686, 3, -1507150, 393222, 1, -1441614, 393222, 2, -1376078, 393222, 3, -1507149, 458758, 1, -1441613, 458758, 2, -1376077, 458758, 3, -720741, 65542, 5, -1310548, 65542, 5, -655209, 65542, 5, -851807, 65542, 5, 917645, 65542, 5, 786586, 196614, 5, -327538, 65542, 5)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Gui" parent="CanvasLayer" instance=ExtResource("20_i0s05")]
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 24.0
+offset_bottom = 32.0
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_biebh")]
 position = Vector2(189, 173)
 
@@ -318,31 +328,31 @@ motion_mirroring = Vector2(288, 0)
 texture = ExtResource("3_uqrsa")
 centered = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("18_qlrio")]
+position = Vector2(272, 152)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("18_qlrio")]
+position = Vector2(296, 152)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("18_qlrio")]
+position = Vector2(320, 152)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("18_qlrio")]
+position = Vector2(408, 200)
+
+[node name="PortalExit" parent="." instance=ExtResource("17_cmkdd")]
+z_index = -14
+position = Vector2(460, 176)
+scale = Vector2(3.48, 3.48)
+
+[node name="Bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0l57g")
 volume_db = -9.043
 pitch_scale = 1.13
 autoplay = true
 parameters/looping = true
 
-[node name="Coins" type="Node2D" parent="."]
-
-[node name="Coin" parent="Coins" instance=ExtResource("18_qlrio")]
-position = Vector2(264, 152)
-
-[node name="Coin2" parent="Coins" instance=ExtResource("18_qlrio")]
-position = Vector2(392, 200)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("18_qlrio")]
-position = Vector2(336, 152)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("18_qlrio")]
-position = Vector2(312, 152)
-
-[node name="Coin5" parent="Coins" instance=ExtResource("18_qlrio")]
-position = Vector2(288, 152)
-
-[node name="PortalExit" parent="." instance=ExtResource("17_cmkdd")]
-z_index = -14
-position = Vector2(460, 176)
-scale = Vector2(3.48, 3.48)
+[node name="CoinSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_5cghg")
